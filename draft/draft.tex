@@ -1,0 +1,96 @@
+\documentclass[UTF8]{ctexart}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\begin{document}
+    长度:\(L = 2.45m\)\\
+    长轴:\(a = 0.89m\)\\
+    短轴:\(b = 0.6m\)\\
+    倾斜角:\(\alpha\)\\
+    第二倾斜角:\(\beta\)\\
+    浮标x位置:\(x_0 = 0.4m\)\\
+    浮标高度,浮标读数:\(h_0\)\\
+    体积:\(\int A(x)dx\)\\
+    面积:\(A(\theta) = \theta ab - ab\cos (\theta) \sin (\theta)\)\\
+    半角\(\theta\) : \(\arccos(\frac{h-b}{b})\)\\
+    
+    斜线段:\(h-h_0 = - (x-x_0) \tan\alpha\)\\
+    h分段点1:\(h_0' = (L-x_0) \tan\alpha\)\\
+    h分段点2:\(h_0'' = 2b - x_0 \tan\alpha\)\\
+    x分段点(下):\(m = x_0+\frac{h_0}{\tan\alpha}\)\\
+    x分段点(上):\(n = \frac{h_0-2b}{\tan\alpha} + x_0\)\\
+
+    具体表达式:
+    \begin{equation}
+        h(x)=\left\{
+        \begin{aligned}
+            \left\{
+                \begin{aligned}
+                    - (x-x_0) \tan\alpha + h_0& &0<x\leq m \\
+                    0 & &m < x \leq L
+                \end{aligned}
+            \right. & & 0<h_0\leq h_0'\\
+            &&\\
+            \left\{
+                \begin{aligned}
+                    - (x-x_0) \tan\alpha + h_0& &0<x\leq L \\
+                \end{aligned}
+            \right. & & h_0'<h_0\leq h_0''\\
+            &&\\
+            \left\{
+                \begin{aligned}
+                    2b & &0<x\leq n\\
+                    - (x-x_0) \arctan\alpha + h_0& &n<x\leq L  
+                \end{aligned}
+            \right.& & h_0''<h_0\leq 2b'
+        \end{aligned}
+        \right.
+    \end{equation}
+
+    积分区间\([-d,d+L]\)
+
+    弓形面积:\(A(\theta,r) = \theta r^2 - r^2\cos (\theta) \sin (\theta)\)
+
+    球半径:\(R\)
+
+    弓形参数:\(\theta  = \arccos(\frac{h-r_0+r}{r}) \)
+
+    要求的第一个参数r:
+
+    \begin{equation}
+        r=\left\{
+        \begin{aligned}
+            \sqrt{R^2- (R+x)^2}& & -d<x\leq 0 \\
+            r_0 & &0<x\leq L\\
+            \sqrt{R^2- (R+x-L-d)^2}& & L<x\leq L+d 
+        \end{aligned}
+        \right.
+    \end{equation}
+
+    要求的第二个参数h:
+
+    方程:\(h = -\tan \alpha 'x + \eta\)
+
+
+    \( ( 0,\alpha_1 ] \):
+    \begin{equation}
+        h(x)=\left\{
+        \begin{aligned}
+            \left\{
+                \begin{aligned}
+                    - x\tan\alpha' + h& &-d<x\leq m \\
+                    0 & &m < x \leq L+d
+                \end{aligned}
+            \right. & & 0<\eta \leq L\tan \alpha'\\
+            &&\\
+            \left\{
+                \begin{aligned}
+                    r_0+r & &0 < x \leq l\\
+                    - x\tan\alpha + h& &l<x\leq m \\
+                    0& &m<x\leq L
+                \end{aligned}
+            \right. & &  L\tan \alpha' <\eta \leq r + \frac{L}{2}\tan{\alpha'}
+        \end{aligned}
+        \right.
+    \end{equation}
+
+\end{document}
